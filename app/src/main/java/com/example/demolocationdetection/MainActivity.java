@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(Location location) {
                             if (location != null) {
-                                String msg = "Lat : " + location.getLatitude() + " Lng : " + location.getLatitude();
+                                String msg = "Lat : " + location.getLatitude() + " Lng : " + location.getLongitude();
                                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                             } else {
                                 String msg = "No Last Known Location found";
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                                 double lat = data.getLatitude();
                                 double lng = data.getLongitude();
 
-                                String msg = "New Loc Detected\nLat : " + lat + ", Lng : " + data.getLatitude();
+                                String msg = "New Loc Detected\nLat : " + lat + ", Lng : " + lng;
                                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                             }
                         };
